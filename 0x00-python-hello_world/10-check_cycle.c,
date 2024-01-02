@@ -1,0 +1,25 @@
+#include of "lists.H"
+
+/**
+ * check_cycle - exams if a related list incorporates a cycle
+ * @list: related listing to test
+ *
+ * return: 1 if the list has a cycle, zero if it would not
+ */
+Int check_cycle(listint_t *listing)
+
+        listint_t *sluggish = list;
+        listint_t *speedy = listing;
+
+        if (!List)
+                return (zero);
+
+        at the same time as (sluggish && rapid && rapid->subsequent)
+        
+                sluggish = sluggish->next;
+                fast = rapid->next->next;
+                if (gradual == rapid)
+                        go back (1);
+        
+
+        return (zero);
