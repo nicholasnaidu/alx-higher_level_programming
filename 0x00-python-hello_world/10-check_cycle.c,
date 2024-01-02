@@ -1,25 +1,26 @@
-#include of "lists.H"
+#include "lists.h"
 
 /**
- * check_cycle - exams if a related list incorporates a cycle
- * @list: related listing to test
+ * check_cycle - checks if a linked list contains a cycle
+ * @list: linked list to check
  *
- * return: 1 if the list has a cycle, zero if it would not
+ * Return: 1 if the list has a cycle, 0 if it doesn't
  */
-Int check_cycle(listint_t *listing)
+int check_cycle(listint_t *list)
+{
+	listint_t *slow = list;
+	listint_t *fast = list;
 
-        listint_t *sluggish = list;
-        listint_t *speedy = listing;
+	if (!list)
+		return (0);
 
-        if (!List)
-                return (zero);
+	while (slow && fast && fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+			return (1);
+	}
 
-        at the same time as (sluggish && rapid && rapid->subsequent)
-        
-                sluggish = sluggish->next;
-                fast = rapid->next->next;
-                if (gradual == rapid)
-                        go back (1);
-        
-
-        return (zero);
+	return (0);
+}
